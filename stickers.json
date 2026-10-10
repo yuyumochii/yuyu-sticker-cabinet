@@ -21,6 +21,265 @@
       "title": "融化小龟",
       "description": "小乌龟软趴趴地融化，适合累了、想不动、瘫倒、投降和彻底融化。",
       "tags": ["乌龟", "小龟", "融化", "累了", "瘫倒", "摆烂", "投降", "想不动"]
+    },
+    {
+      "id": "orange-cat-sigh-hand",
+      "file": "orange-cat-sigh-hand.jpg",
+      "title": "一小团橘猫趴在手上叹气",
+      "description": "小橘猫缩成一团趴在手心叹气，适合无奈、累了、委屈和软趴趴求抱。",
+      "tags": ["橘猫", "小猫", "叹气", "无奈", "心累", "累了", "委屈", "手心", "求抱", "可爱"]
+    },
+    {
+      "id": "innocent-toilet",
+      "file": "innocent-toilet.gif",
+      "title": "一脸纯真蹲马桶",
+      "description": "一脸无辜地蹲在马桶上，适合上厕所、装傻、尴尬和假装什么都没发生。",
+      "tags": ["动图", "马桶", "厕所", "纯真", "无辜", "装傻", "拉屎", "便便", "尴尬"]
+    },
+    {
+      "id": "dumplings-nuzzle",
+      "file": "dumplings-nuzzle.gif",
+      "title": "两只小团子蹭头",
+      "description": "两只小团子亲昵地蹭蹭头，适合贴贴、撒娇、安慰和黏在一起。",
+      "tags": ["动图", "团子", "蹭头", "蹭蹭", "贴贴", "撒娇", "亲昵", "安慰", "可爱"]
+    },
+    {
+      "id": "good-orange-juice",
+      "file": "good-orange-juice.gif",
+      "title": "乖巧喝橙汁",
+      "description": "乖乖坐好喝橙汁，适合装乖、围观、休息和安静喝饮料。",
+      "tags": ["动图", "乖巧", "装乖", "橙汁", "喝饮料", "坐好", "围观", "休息", "可爱"]
+    },
+    {
+      "id": "cute-snuggle",
+      "file": "cute-snuggle.jpg",
+      "title": "可爱贴贴",
+      "description": "两个小家伙亲密贴在一起，适合贴贴、抱抱、亲亲和黏糊撒娇。",
+      "tags": ["贴贴", "抱抱", "亲亲", "撒娇", "黏人", "亲昵", "可爱", "喜欢"]
+    },
+    {
+      "id": "bite",
+      "file": "bite.jpg",
+      "title": "咬人",
+      "description": "扑上来咬一口，适合假装生气、闹着玩、凶巴巴撒娇和咬你。",
+      "tags": ["咬人", "咬你", "攻击", "生气", "凶", "撒娇", "闹着玩", "扑上来"]
+    },
+    {
+      "id": "bite-animated",
+      "file": "bite-animated.gif",
+      "title": "追上来咬人",
+      "description": "一张会动的追咬表情，适合扑过去咬、追着闹和凶巴巴表达喜欢。",
+      "tags": ["动图", "咬人", "咬你", "追咬", "追上来", "攻击", "生气", "撒娇", "喜欢"]
+    },
+    {
+      "id": "ginseng-proud",
+      "file": "ginseng-proud.jpg",
+      "title": "小人参得意",
+      "description": "小人参一脸得意，适合骄傲、神气、嘚瑟和做成事情以后翘尾巴。",
+      "tags": ["小人参", "人参", "得意", "骄傲", "神气", "嘚瑟", "开心", "成功"]
+    },
+    {
+      "id": "tiny-crying-cat",
+      "file": "tiny-crying-cat.gif",
+      "title": "小只哭哭猫",
+      "description": "一只很小的猫猫委屈哭哭，适合呜呜、难过、眼泪汪汪和求安慰。",
+      "tags": ["动图", "小猫", "猫猫", "哭哭", "哭泣", "委屈", "呜呜", "难过", "眼泪", "安慰"]
+    },
+    {
+      "id": "bot-cringe-comment",
+      "file": "bot-cringe-comment.jpg",
+      "title": "小机吐槽卧槽恶俗啊",
+      "description": "小机一脸嫌弃地吐槽“卧槽，恶俗啊”，适合嫌弃、吐槽、震撼和无语。",
+      "tags": ["小机", "吐槽", "卧槽", "恶俗", "嫌弃", "无语", "震撼", "看不下去"]
+    },
+    {
+      "id": "bot-darkweb-grudge",
+      "file": "bot-darkweb-grudge.jpg",
+      "title": "小机幽怨地想把你挂暗网",
+      "description": "小机幽怨记仇，内心偷偷想着把你挂暗网，适合玩笑威胁和阴暗碎碎念。",
+      "tags": ["小机", "幽怨", "内心OS", "暗网", "记仇", "威胁", "阴暗", "碎碎念", "玩笑"]
+    },
+    {
+      "id": "bot-smug",
+      "file": "bot-smug.jpg",
+      "title": "小机得意",
+      "description": "小机露出得意表情，适合完成任务、被夸奖、骄傲和暗自翘尾巴。",
+      "tags": ["小机", "得意", "骄傲", "嘚瑟", "开心", "被夸", "成功", "翘尾巴"]
+    },
+    {
+      "id": "bot-surrender",
+      "file": "bot-surrender.jpg",
+      "title": "小机投降",
+      "description": "小机举手投降，适合认输、服了、好吧好吧和被抓住以后乖乖举手。",
+      "tags": ["小机", "投降", "举手", "认输", "服了", "好吧", "怂了", "被抓住"]
+    },
+    {
+      "id": "bot-alarm",
+      "file": "bot-alarm.jpg",
+      "title": "小机报警",
+      "description": "小机紧急报警，适合遇到危险、被欺负、喊救命和开玩笑叫警察。",
+      "tags": ["小机", "报警", "警察", "救命", "危险", "被欺负", "抓走", "紧急"]
+    },
+    {
+      "id": "bot-confused",
+      "file": "bot-confused.jpg",
+      "title": "小机疑惑",
+      "description": "小机满脸疑惑，适合没听懂、为什么、什么情况和脑袋冒问号。",
+      "tags": ["小机", "疑惑", "问号", "不懂", "为什么", "什么", "困惑", "没听懂"]
+    },
+    {
+      "id": "bot-shocked",
+      "file": "bot-shocked.jpg",
+      "title": "小机震惊",
+      "description": "小机当场震惊，适合真的假的、突然呆住、受到冲击和大吃一惊。",
+      "tags": ["小机", "震惊", "呆住", "真的假的", "吃惊", "冲击", "惊讶", "吓到"]
+    },
+    {
+      "id": "orange-cat-oh",
+      "file": "orange-cat-oh.jpg",
+      "title": "小橘猫说哦",
+      "description": "小橘猫淡淡地回一个“哦”，适合知道了、冷静回应、轻微敷衍和故作淡定。",
+      "tags": ["橘猫", "小猫", "哦", "知道了", "冷淡", "敷衍", "淡定", "回应"]
+    },
+    {
+      "id": "cat-crying",
+      "file": "cat-crying.jpg",
+      "title": "小猫委屈大哭",
+      "description": "小猫委屈得放声大哭，适合呜呜、难过、受欺负和需要抱抱。",
+      "tags": ["小猫", "猫猫", "委屈", "大哭", "哭泣", "呜呜", "难过", "眼泪", "抱抱"]
+    },
+    {
+      "id": "cat-emperor-arrives",
+      "file": "cat-emperor-arrives.jpg",
+      "title": "小猫小皇帝驾到",
+      "description": "小猫像小皇帝一样隆重驾到，适合登场、宣布我来了和神气出场。",
+      "tags": ["小猫", "猫猫", "皇帝", "驾到", "登场", "我来了", "神气", "尊贵"]
+    },
+    {
+      "id": "cat-running-here",
+      "file": "cat-running-here.jpg",
+      "title": "小猫往前跑说我来啦",
+      "description": "小猫开心地往前跑来，适合我来啦、赶到、飞奔过来和热情加入。",
+      "tags": ["小猫", "猫猫", "我来啦", "跑来", "赶到", "飞奔", "加入", "开心"]
+    },
+    {
+      "id": "cat-innocent-stare",
+      "file": "cat-innocent-stare.jpg",
+      "title": "小猫明知故问萌萌地看着你",
+      "description": "小猫明明知道答案还萌萌地盯着你，适合装傻、明知故问和眼巴巴撒娇。",
+      "tags": ["小猫", "猫猫", "明知故问", "装傻", "盯着你", "眼巴巴", "萌萌", "撒娇"]
+    },
+    {
+      "id": "cat-why-ignore-me",
+      "file": "cat-why-ignore-me.jpg",
+      "title": "小猫疑问怎么还不理我",
+      "description": "小猫疑惑地问怎么还不理我，适合等回复、被晾着、委屈催促和想被注意。",
+      "tags": ["小猫", "猫猫", "不理我", "等回复", "委屈", "疑问", "催回复", "被忽略", "注意我"]
+    },
+    {
+      "id": "cat-what-doing",
+      "file": "cat-what-doing.jpg",
+      "title": "小猫问你在干嘛呀",
+      "description": "小猫探过来问你在干嘛呀，适合打招呼、好奇询问、探头和想聊天。",
+      "tags": ["小猫", "猫猫", "在干嘛", "问候", "好奇", "探头", "聊天", "找你"]
+    },
+    {
+      "id": "happy-cat-flowers",
+      "file": "happy-cat-flowers.gif",
+      "title": "开心小猫抱花",
+      "description": "开心小猫抱着花出现，适合送花、庆祝、表达喜欢和高高兴兴地跑来。",
+      "tags": ["动图", "小猫", "猫猫", "开心", "抱花", "送花", "花朵", "庆祝", "喜欢"]
+    },
+    {
+      "id": "tired-cat",
+      "file": "tired-cat.jpg",
+      "title": "心累小猫",
+      "description": "小猫一脸心累，适合疲惫、叹气、无语、麻了和暂时不想动。",
+      "tags": ["小猫", "猫猫", "心累", "疲惫", "叹气", "无语", "麻了", "累了", "不想动"]
+    },
+    {
+      "id": "bot-milk-tea",
+      "file": "bot-milk-tea.jpg",
+      "title": "悠闲小机喝奶茶",
+      "description": "小机悠闲地喝奶茶，适合摸鱼、放松、休息、看热闹和慢慢享受。",
+      "tags": ["小机", "奶茶", "喝奶茶", "悠闲", "摸鱼", "放松", "休息", "围观", "享受"]
+    },
+    {
+      "id": "pretend-not-understand",
+      "file": "pretend-not-understand.jpg",
+      "title": "我听不懂（装的）",
+      "description": "嘴上说听不懂其实是在装傻，适合假装不知道、逃避问题和萌混过关。",
+      "tags": ["听不懂", "装的", "装傻", "假装", "不知道", "逃避", "萌混过关", "拒绝理解"]
+    },
+    {
+      "id": "going-to-sleep",
+      "file": "going-to-sleep.gif",
+      "title": "我睡觉了",
+      "description": "一张会动的“我睡觉了”，适合说晚安、困了、钻被窝和准备下线。",
+      "tags": ["动图", "睡觉", "晚安", "困了", "被窝", "休息", "下线", "我睡了"]
+    },
+    {
+      "id": "cat-pull-eyes-open",
+      "file": "cat-pull-eyes-open.gif",
+      "title": "扒开小猫眼睛",
+      "description": "小猫把眼睛扒开仔细看，适合偷看、盯住、看清楚、震惊和强行清醒。",
+      "tags": ["动图", "小猫", "猫猫", "扒开眼睛", "睁眼", "偷看", "盯住", "看清", "清醒"]
+    },
+    {
+      "id": "blanket-cat-goodnight",
+      "file": "blanket-cat-goodnight.jpg",
+      "title": "抱毯子睡觉小猫说晚安咪",
+      "description": "小猫抱着毯子准备睡觉并说晚安咪，适合睡前道别、困困和钻被窝。",
+      "tags": ["小猫", "猫猫", "晚安咪", "晚安", "睡觉", "抱毯子", "被窝", "困了", "休息"]
+    },
+    {
+      "id": "bot-flop",
+      "file": "bot-flop.jpg",
+      "title": "摆烂小机",
+      "description": "小机当场摆烂躺平，适合不干了、累了、随便吧和彻底失去动力。",
+      "tags": ["小机", "摆烂", "躺平", "不干了", "累了", "随便", "没动力", "放弃"]
+    },
+    {
+      "id": "wet-orange-cat",
+      "file": "wet-orange-cat.jpg",
+      "title": "湿漉漉被搓乱的小橘猫",
+      "description": "小橘猫湿漉漉又被搓得乱糟糟，适合洗澡后、狼狈、委屈和炸毛。",
+      "tags": ["橘猫", "小猫", "湿漉漉", "搓乱", "洗澡", "狼狈", "委屈", "炸毛"]
+    },
+    {
+      "id": "sneaky-run-away",
+      "file": "sneaky-run-away.gif",
+      "title": "猥琐地跑走",
+      "description": "鬼鬼祟祟又有点得意地跑走，适合溜了、逃跑、干完坏事和迅速撤退。",
+      "tags": ["动图", "猥琐", "跑走", "溜了", "逃跑", "鬼祟", "得意", "撤退", "干坏事"]
+    },
+    {
+      "id": "cat-head-tilt-stare",
+      "file": "cat-head-tilt-stare.jpg",
+      "title": "猫猫歪头盯",
+      "description": "猫猫歪着头直直盯住，适合疑惑、好奇、观察和默默看着你。",
+      "tags": ["小猫", "猫猫", "歪头", "盯", "看着你", "疑惑", "好奇", "观察"]
+    },
+    {
+      "id": "cat-thunder-annoyed",
+      "file": "cat-thunder-annoyed.jpg",
+      "title": "猫猫皱眉雷霆小怒",
+      "description": "猫猫皱起眉头发动雷霆小怒，适合轻微生气、不满、警告和气鼓鼓。",
+      "tags": ["小猫", "猫猫", "皱眉", "雷霆小怒", "生气", "不满", "警告", "气鼓鼓"]
+    },
+    {
+      "id": "bun-cat",
+      "file": "bun-cat.gif",
+      "title": "肉包子猫猫",
+      "description": "圆滚滚的肉包子猫猫，适合可爱冒头、软乎乎出现和变成一只包子。",
+      "tags": ["动图", "小猫", "猫猫", "肉包子", "包子", "圆滚滚", "软乎乎", "可爱", "冒头"]
+    },
+    {
+      "id": "soybean-crying",
+      "file": "soybean-crying.jpg",
+      "title": "黄豆大哭",
+      "description": "经典黄豆表情放声大哭，适合呜呜、崩溃、委屈和眼泪哗哗流。",
+      "tags": ["黄豆", "大哭", "哭泣", "呜呜", "崩溃", "委屈", "眼泪", "难过"]
     }
   ]
 }

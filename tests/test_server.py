@@ -66,6 +66,22 @@ class StickerServerTests(unittest.TestCase):
         assert response.content.startswith(b"\x89PNG\r\n\x1a\n")
         assert missing.status_code == 404
 
+    def test_public_sticker_route_serves_animation(self) -> None:
+        anyio.run(self._check_public_animation_route)
+
+    @staticmethod
+    async def _check_public_animation_route() -> None:
+        server = build_server()
+        transport = httpx2.ASGITransport(app=server.streamable_http_app())
+        async with httpx2.AsyncClient(
+            transport=transport, base_url="http://127.0.0.1"
+        ) as client:
+            response = await client.get("/stickers/bite-animated")
+
+        assert response.status_code == 200
+        assert response.headers["content-type"].startswith("image/gif")
+        assert response.content.startswith(b"GIF")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -13,12 +13,14 @@ class StickerCatalogTests(unittest.TestCase):
     def setUp(self) -> None:
         self.catalog = StickerCatalog()
 
-    def test_loads_three_stickers(self) -> None:
-        self.assertEqual(self.catalog.count, 3)
+    def test_loads_full_sticker_batch(self) -> None:
+        self.assertEqual(self.catalog.count, 40)
 
     def test_searches_by_chinese_mood(self) -> None:
         self.assertEqual(self.catalog.search("融化")[0].id, "turtle-melting")
         self.assertEqual(self.catalog.search("读书")[0].id, "cat-on-book")
+        self.assertEqual(self.catalog.search("小机投降")[0].id, "bot-surrender")
+        self.assertEqual(self.catalog.search("晚安咪")[0].id, "blanket-cat-goodnight")
 
     def test_builds_valid_mcp_image_content(self) -> None:
         content = self.catalog.image_content("turtle-plate")
@@ -61,6 +63,11 @@ class StickerCatalogTests(unittest.TestCase):
 
         self.assertEqual(content["mimeType"], "image/gif")
         self.assertEqual(base64.b64decode(content["data"]), animated_gif)
+
+    def test_serves_imported_animation_as_gif(self) -> None:
+        content = self.catalog.image_content("bite-animated")
+        self.assertEqual(content["mimeType"], "image/gif")
+        self.assertTrue(base64.b64decode(content["data"]).startswith(b"GIF"))
 
     def test_rejects_unknown_id(self) -> None:
         with self.assertRaisesRegex(StickerCatalogError, "没有这个表情包"):

@@ -127,7 +127,7 @@ def build_server() -> MCPServer[Any]:
         title="yuyu 的表情包小炉子",
         description="只读地查找并发送 yuyu 自己的表情包。",
         instructions=SERVER_INSTRUCTIONS,
-        version="0.4.0",
+        version="0.5.0",
         extensions=[apps],
     )
 
