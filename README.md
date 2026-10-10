@@ -54,7 +54,7 @@ STICKER_HOST=127.0.0.1 STICKER_PORT=8765 python server.py
 
 ## 往柜子里添图
 
-1. 把 PNG、JPG、WebP 或 GIF 放进 `stickers/`。
+1. 把 PNG/APNG、JPG、WebP（包括动态 WebP）或 GIF 放进 `stickers/`；服务器会原样送出动图，不会压成静态图片。单张上限 8 MiB。
 2. 在 `stickers.json` 增加一条记录。
 3. `id` 用稳定的小写英文标识；`title`、`description` 和 `tags` 写给小机看，越贴近真实语境，挑图越准。
 4. 运行测试。服务器不需要因为新增图片而改代码。

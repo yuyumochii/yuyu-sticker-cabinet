@@ -44,7 +44,9 @@ class StickerServerTests(unittest.TestCase):
             assert "ui/notifications/initialized" in widget_html
             assert "ui/notifications/tool-result" in widget_html
             assert "ui/notifications/size-changed" in widget_html
-            assert STICKER_WIDGET_URI.endswith("sticker-v2.html")
+            assert 'width: min(80vw, 320px)' in widget_html
+            assert 'max-height: 320px' in widget_html
+            assert STICKER_WIDGET_URI.endswith("sticker-v3.html")
 
     def test_public_sticker_route_serves_original_image(self) -> None:
         anyio.run(self._check_public_sticker_route)
