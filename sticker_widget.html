@@ -54,6 +54,25 @@
     <script>
       const image = document.getElementById("sticker");
       const status = document.getElementById("status");
+      const pendingRequests = new Map();
+      let nextRequestId = 1;
+      let bridgeReady = false;
+
+      function post(message) {
+        window.parent.postMessage(message, "*");
+      }
+
+      function request(method, params) {
+        const id = nextRequestId++;
+        post({ jsonrpc: "2.0", id, method, params });
+        return new Promise((resolve, reject) => {
+          pendingRequests.set(id, { resolve, reject });
+        });
+      }
+
+      function notify(method, params = {}) {
+        post({ jsonrpc: "2.0", method, params });
+      }
 
       function structured(value) {
         return value?.structuredContent ?? value?.structured_content ?? value;
@@ -77,18 +96,56 @@
         return true;
       }
 
+      function reportSize() {
+        if (!bridgeReady) return;
+        notify("ui/notifications/size-changed", {
+          width: Math.ceil(document.documentElement.scrollWidth),
+          height: Math.ceil(document.documentElement.scrollHeight),
+        });
+      }
+
       window.addEventListener(
         "message",
         (event) => {
           if (event.source !== window.parent) return;
           const message = event.data;
           if (!message || message.jsonrpc !== "2.0") return;
+
+          if (message.id !== undefined && pendingRequests.has(message.id)) {
+            const pending = pendingRequests.get(message.id);
+            pendingRequests.delete(message.id);
+            if (message.error) pending.reject(message.error);
+            else pending.resolve(message.result);
+            return;
+          }
+
           if (message.method === "ui/notifications/tool-result") {
             render(message.params);
           }
         },
         { passive: true }
       );
+
+      async function connectBridge() {
+        try {
+          await request("ui/initialize", {
+            appInfo: { name: "yuyu-sticker-card", version: "0.3.0" },
+            appCapabilities: {},
+            protocolVersion: "2026-01-26",
+          });
+          notify("ui/notifications/initialized");
+          bridgeReady = true;
+
+          const observer = new ResizeObserver(reportSize);
+          observer.observe(document.documentElement);
+          observer.observe(document.body);
+          reportSize();
+        } catch (_error) {
+          status.textContent = "小炉子连接慢了一点，请刷新后再试一次。";
+        }
+      }
+
+      connectBridge();
 
       if (!render(window.openai?.toolOutput)) {
         let attempts = 0;

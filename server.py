@@ -22,7 +22,7 @@ SERVER_INSTRUCTIONS = (
 )
 
 DEFAULT_PUBLIC_BASE_URL = "https://stickers.little-archive.com"
-STICKER_WIDGET_URI = "ui://yuyu-sticker-cabinet/sticker-v1.html"
+STICKER_WIDGET_URI = "ui://yuyu-sticker-cabinet/sticker-v2.html"
 
 
 class StickerResult(TypedDict):
@@ -127,7 +127,7 @@ def build_server() -> MCPServer[Any]:
         title="yuyu 的表情包小炉子",
         description="只读地查找并发送 yuyu 自己的表情包。",
         instructions=SERVER_INSTRUCTIONS,
-        version="0.2.0",
+        version="0.3.0",
         extensions=[apps],
     )
 

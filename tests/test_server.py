@@ -39,7 +39,12 @@ class StickerServerTests(unittest.TestCase):
 
             resource = await client.read_resource(STICKER_WIDGET_URI)
             assert resource.contents[0].mime_type == "text/html;profile=mcp-app"
-            assert "ui/notifications/tool-result" in resource.contents[0].text
+            widget_html = resource.contents[0].text
+            assert "ui/initialize" in widget_html
+            assert "ui/notifications/initialized" in widget_html
+            assert "ui/notifications/tool-result" in widget_html
+            assert "ui/notifications/size-changed" in widget_html
+            assert STICKER_WIDGET_URI.endswith("sticker-v2.html")
 
     def test_public_sticker_route_serves_original_image(self) -> None:
         anyio.run(self._check_public_sticker_route)
