@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: ui-rounded, "SF Pro Rounded", "PingFang SC", system-ui, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 120px;
+        display: grid;
+        place-items: center;
+        background: transparent;
+      }
+
+      .card {
+        width: min(100%, 440px);
+        padding: 8px;
+        display: grid;
+        place-items: center;
+      }
+
+      img {
+        display: none;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 440px;
+        object-fit: contain;
+      }
+
+      .status {
+        padding: 20px 12px;
+        color: color-mix(in srgb, CanvasText 62%, transparent);
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" aria-live="polite">
+      <img id="sticker" alt="" />
+      <div id="status" class="status">表情包正在跑来…</div>
+    </main>
+
+    <script>
+      const image = document.getElementById("sticker");
+      const status = document.getElementById("status");
+
+      function structured(value) {
+        return value?.structuredContent ?? value?.structured_content ?? value;
+      }
+
+      function render(value) {
+        const result = structured(value);
+        if (!result?.image_url) return false;
+
+        image.alt = result.alt || result.title || "yuyu 的表情包";
+        image.onload = () => {
+          image.style.display = "block";
+          status.style.display = "none";
+        };
+        image.onerror = () => {
+          image.style.display = "none";
+          status.style.display = "block";
+          status.textContent = "表情包迷路了，请刷新小炉子后再试一次。";
+        };
+        image.src = result.image_url;
+        return true;
+      }
+
+      window.addEventListener(
+        "message",
+        (event) => {
+          if (event.source !== window.parent) return;
+          const message = event.data;
+          if (!message || message.jsonrpc !== "2.0") return;
+          if (message.method === "ui/notifications/tool-result") {
+            render(message.params);
+          }
+        },
+        { passive: true }
+      );
+
+      if (!render(window.openai?.toolOutput)) {
+        let attempts = 0;
+        const fallback = window.setInterval(() => {
+          attempts += 1;
+          if (render(window.openai?.toolOutput) || attempts >= 40) {
+            window.clearInterval(fallback);
+          }
+        }, 100);
+      }
+    </script>
+  </body>
+</html>

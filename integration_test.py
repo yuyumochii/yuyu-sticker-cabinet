@@ -41,22 +41,27 @@ async def inspect_server() -> None:
                     "show_sticker", {"sticker_id": "turtle-plate"}
                 )
 
-                tool_names = [tool.name for tool in tools.tools]
+                tool_names = {tool.name for tool in tools.tools}
                 selected_id = listed.structured_content["stickers"][0]["id"]
-                image = shown.content[0]
+                image = next(item for item in shown.content if item.type == "image")
 
                 assert initialized.server_info.name == "yuyu-sticker-cabinet"
                 assert initialized.instructions
-                assert tool_names == ["list_stickers", "show_sticker"]
+                assert tool_names == {"list_stickers", "show_sticker"}
                 assert selected_id == "turtle-plate"
                 assert image.type == "image"
                 assert image.mime_type == "image/png"
                 assert image.data
+                assert shown.structured_content is not None
+                assert shown.structured_content["image_url"].endswith(
+                    "/stickers/turtle-plate"
+                )
 
                 print(f"服务器：{initialized.server_info.name} {initialized.server_info.version}")
-                print(f"工具：{', '.join(tool_names)}")
+                print(f"工具：{', '.join(sorted(tool_names))}")
                 print(f"‘呆住’选中：{selected_id}")
                 print(f"图片返回：{image.mime_type}，{len(image.data)} 个 base64 字符")
+                print(f"图片卡片：{shown.structured_content['image_url']}")
                 print("端到端测试通过。")
 
 

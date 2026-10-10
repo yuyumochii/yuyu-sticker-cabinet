@@ -6,6 +6,7 @@ services:
     environment:
       STICKER_HOST: 0.0.0.0
       STICKER_PORT: 8765
+      STICKER_PUBLIC_BASE_URL: https://stickers.little-archive.com
     ports:
       - "127.0.0.1:${STICKER_HOST_PORT:-18765}:8765"
     read_only: true

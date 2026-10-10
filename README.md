@@ -3,7 +3,7 @@
 一个最小、只读的 MCP 表情包服务器。它让 ChatGPT 能够：
 
 1. 用 `list_stickers` 按心情、动作、角色或物品查找表情包；
-2. 用 `show_sticker` 读取选中的原图并直接渲染；
+2. 用 `show_sticker` 读取选中的原图，并通过 MCP Apps 内嵌图片卡片直接渲染；
 3. 根据服务器说明，在语境确实合适时自然地主动使用，但不会每句话都发。
 
 当前装了三位测试员：书上小猫、餐盘小龟、融化小龟。
@@ -100,6 +100,15 @@ http://127.0.0.1:18765
 ```text
 https://你的独立子域名/mcp
 ```
+
+`show_sticker` 还会在同一域名下读取原图，例如：
+
+```text
+https://你的独立子域名/stickers/turtle-plate
+```
+
+部署新版本后，在 ChatGPT 的插件详情页点一次 **Refresh**，让 ChatGPT 重新读取
+`show_sticker` 的输出结构和 `ui://` 图片卡片资源。
 
 官方参考：
 
