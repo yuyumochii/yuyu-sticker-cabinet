@@ -77,6 +77,30 @@ STICKER_HOST=127.0.0.1 STICKER_PORT=8765 python server.py
 
 这个项目默认绑定回环地址。不要直接把 8765 端口裸露到公网；沿用反向代理或隧道，并把它和玩具控制服务分开部署。
 
+## 用 Docker 部署到 VPS
+
+仓库自带 `compose.yaml`，并仅把服务映射到 VPS 回环地址
+`127.0.0.1:18765`：
+
+```bash
+git clone https://github.com/yuyumochii/yuyu-sticker-cabinet.git
+cd yuyu-sticker-cabinet
+docker compose up -d --build
+docker compose ps
+```
+
+当 Cloudflare Tunnel 容器使用 host 网络时，源站服务填写：
+
+```text
+http://127.0.0.1:18765
+```
+
+公网 MCP 地址则是：
+
+```text
+https://你的独立子域名/mcp
+```
+
 官方参考：
 
 - https://developers.openai.com/plugins/build/mcp-server
